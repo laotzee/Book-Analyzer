@@ -43,8 +43,55 @@ These are the main patter spotted inside of the example file:
 
 The regex patters should look like: ".+" \S+ \S+\. ".+"?
 
+
+by HtDF definition
+
+handle > list: **Signature**
+
+Takes the handle of a file, and returns a list containing quotes found using regex. If not quotes are found, returns an empty list. **Purpose**
+
+def quotes(handle): list **stub**
+
+Ex.
+
+
+' "If you don't hire me, you are losing a valuable asset" said as a matter of fact the humble developer'  >>>>> "If you don't hire me, you are losing a valuable asset"
+
+
+Alice was beginning to get very tired of sitting by her sister on the
+bank, and of having nothing to do: once or twice she had peeped into
+the book her sister was reading, but it had no pictures or
+conversations in it, “and what is the use of a book,” thought Alice
+“without pictures or conversations?” >>>>>>  “and what is the use of a book,” thought Alice “without pictures or conversations?” 
+
+
+There was nothing so _very_ remarkable in that; nor did Alice think it
+so _very_ much out of the way to hear the Rabbit say to itself, “Oh
+dear! Oh dear! I shall be late!” (when she thought it over afterwards,
+it occurred to her that she ought to have wondered at this, but at the
+time it all seemed quite natural) >>>> “Oh dear! Oh dear! I shall be late!”
+
+
+I need to make a patter which starts with something inside quotes, and optionally it will have some characters followed by another set of quotation marks.
+
+".+" ?.+?? ".+?"?
+
+
+
 ### Search sentences containing certain words
 
 The idea is to look for sentences containing word or set of related words and returns the occurence of them. 
 
 Ex. (Knowledge, Intelligence, Wit, Intelligent, Wise, Smart)
+
+
+
+
+### Replace any character name with yours!
+
+If you ever wanted to be in your favorite book, now it's your time. Kinda. This feature lets you change the name of the main character for yours, or change each instance of any name in the text for yours.
+
+The way for implementing this is by using the method .sub() from re.
+
+
+
