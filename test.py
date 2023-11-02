@@ -10,6 +10,15 @@ should_be_quote = [
 ]
 
 with open("quotes.md") as test:
-    citation = main.get_quotes(test.read())
+    data = test.read()
+    citation = main.get_quotes(data[:])
+
+with open("quotes.md") as test:
+    words, x = main.word_paragraph(test)
+    top_words = main.count_words(words)
+
+for word, num in top_words.items():
+    print(f"word: {word}\nnum:{num}")
 
 assert should_be_quote == citation
+assert type(top_words) == dict

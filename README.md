@@ -12,25 +12,46 @@ The appended alice.txt file is a copy of the book 'Alice's Adventures in Wonderl
 
 Utilizing HtDF
 
-Book handle > (word_count, paragraps) **Signature** 
+Book handle > (words, paragraph_number) **Signature** 
 
-Takes a book handle, a returns a tuple with the number of words and an approximation of the paragraphs **Purpose**
+Takes a file handle, a returns a tuple with the words and an approximation of the paragraphs inside of the file**Purpose**
 
 def word_paragraps(handle): (tuple) **Stub**
 
 
 **Ex:**
 
-word_paragrap(handle1) >>> (3234,350)
-word_paragrap(handle2) >>> (238, 50)
+word_paragrap(handle1) >>> (tuple ,350)
+word_paragrap(handle2) >>> (tuple , 50)
 
 
 
 #### Count number of words
-The number of words that the word contained is obtained by breaking down the lines into sentences, and then into non-white character string greater than 1. I could do that by just taking out white spaces, but I have to tear apart the book into lines for next step
+The number of words that the word contained is obtained by breaking down the lines into sentences, and then into non-white character string greater than 1. I could do that by just taking out white spaces, but I have to tear apart the book into lines for next step.
 
 #### Get Number of Paragraphs
 This is achieve by counting the number of empty strings when breaking down the book into sentences, denotating the end of a paragraph. This will of course be an approximation and not an exact number 
+
+#### Most Repeated Words
+
+As for the most repeated words, I will change slightly the implementation for counting the number of words; instead of giving me directly the amount of words, it will give me back a tuple with words, so that I can check the size and analyze the data while only going through it once.
+
+- A function to count what are the most used words
+
+Word list -> dictionary **Signature**
+
+Takes a list of words as argument and returns a dicionary that contains a word as a key, and its value represents its repetition throughout the file **Purpose**
+
+Ex.
+
+count_words(list1) = {'attention': 5, 'mindful': 10, 'caring': 3, 'calmness':15, 'peacefull': 20}
+count_words(list2) = {'keyboard': 7, 'workflow': 2, 'proficiency': 8}
+
+def count_words(word_list): return dictionary
+
+
+- Show the most used words along with 
+
 
 ### Get Quotes from the Book
 
@@ -92,6 +113,4 @@ Ex. (Knowledge, Intelligence, Wit, Intelligent, Wise, Smart)
 If you ever wanted to be in your favorite book, now it's your time. Kinda. This feature lets you change the name of the main character for yours, or change each instance of any name in the text for yours.
 
 The way for implementing this is by using the method .sub() from re.
-
-
 
