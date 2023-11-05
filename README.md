@@ -50,7 +50,22 @@ count_words(list2) = {'keyboard': 7, 'workflow': 2, 'proficiency': 8}
 def count_words(word_list): return dictionary
 
 
-- Show the most used words along with 
+- Show the most used words along, like 10 of them:
+
+- Function to swap values for being able to organized. 
+
+Dictionary -> List **Signature**
+
+Takes a dictionary as argument and then returns a list of binary tuples, where the first element is the value and the second element is the key.  **Purpose**
+
+def dict_to_list(): list() **Stub**
+
+
+
+These two can be the same, I'll just add an extra parameter to indicate that. Even, when I finish the sorting practice, I can implement that instead of the Python built-in function.
+
+- Function to show most used
+- Function to show less used
 
 
 ### Get Quotes from the Book
